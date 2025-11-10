@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Artificial intelligence & Cyber security — Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-1: #061023;
+    --bg-2: #071627;
+    --text: #e6eef9;
+    --muted: #9aa8c0;
+    --accent: #3b6fe0;
+    --accent-2: #2b50b8;
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family: "Poppins", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    min-height:100vh;
+    background-color: black;
+  }
+
+  header{
+    position:fixed;
+    top:18px;
+    left:0;
+    right:0;
+    z-index:40;
+    pointer-events:auto;
+  }
+  .nav{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .nav ul{
+    list-style:none;
+    display:flex;
+    gap:36px;
+    padding:0;
+    margin:0;
+  }
+  .nav a{
+    text-decoration:none;
+    color:rgba(255,255,255,0.75);
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:0.3px;
+    padding:6px 8px;
+    transition:color .18s, transform .12s;
+  }
+  .nav a:hover{ color:var(--text); transform:translateY(-2px); }
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:120px 20px 60px;
+    display:flex;
+    align-items:center;
+    gap:40px;
+  }
+  .left{
+    width:56%;
+  }
+  .eyebrow{
+    color:var(--accent);
+    font-weight:600;
+    font-size:13px;
+    letter-spacing:1px;
+    margin-bottom:18px;
+    display:inline-block;
+  }
+  h1{
+    margin:0 0 18px 0;
+    font-size:56px;
+    line-height:1.02;
+    font-weight:900;
+    color:var(--text);
+    font-family:"Montserrat", "Poppins";
+  }
+  p.lead{
+    margin:0 0 26px 0;
+    color:var(--muted);
+    max-width:560px;
+    font-size:15px;
+    line-height:1.6;
+  }
+
+  .buttons{
+    display:flex;
+    gap:14px;
+    margin:24px 0 36px 0;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    border-radius:8px;
+    padding:12px 20px;
+    font-weight:600;
+    cursor:pointer;
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+  }
+  .btn-primary{
+    background:linear-gradient(180deg,var(--accent),var(--accent-2));
+    box-shadow:0 6px 18px rgba(43,80,184,0.18);
+  }
+  .btn-video{
+    background:#2f4f9b;
+    opacity:0.95;
+  }
+
+
+  .right{
+    width:44%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+  }
+
+
+  .logos{
+    margin-top:80px;
+    display:flex;
+    gap:28px;
+    align-items:center;
+    justify-content:space-between;
+    padding:40px 0 0 0;
+    flex-wrap:wrap;
+  }
+  .logo-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--muted);
+    font-weight:600;
+    font-size:15px;
+  }
+  
+
+  .hero-bottom{
+    margin-top:28px;
+    padding-bottom:80px;
+    border-top:1px solid rgba(255,255,255,0.02);
+  }
+
+ 
+  @media (max-width:920px){
+    .wrap{flex-direction:column; align-items:flex-start; padding-top:80px}
+    .left, .right{width:100%}
+    .right{order:2; margin-top:20px; display:flex; justify-content:flex-end}
+    h1{font-size:40px}
+    .logos{justify-content:space-around}
+  }
+  @media (max-width:520px){
+    header{top:12px}
+    .nav ul{gap:18px}
+    .wrap{padding-top:60px}
+    h1{font-size:32px}
+    .buttons{flex-direction:column; align-items:flex-start}
+     .right{justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="wrap">
+    <div class="left">
+      <div class="eyebrow">NEXT GENERATION PLATFORM</div>
+      <h1>Artificial intelligence<br>&amp; Cyber security</h1>
+      <p class="lead">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="#">
+          Get Started
+        </a>
+
+        <a class="btn btn-video" href="#">
+          Watch Video
+        </a>
+      </div>
+
+      <div class="logos hero-bottom">
+        <div class="logo-item">
+          <img src="logoipsumm.jpg" alt="Logo Ipsum 1" />
+        </div>
+      
+      </div>
+
+      <div class="right">
+        <img src="rocket&man.png" alt="Rocket and Man Illustration" style="max-width:100%; height:auto; margin-left:400" />
+      </div>
+
+   </div>
+</section>
+</main>
+
+</body>
+</html>
